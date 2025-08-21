@@ -1,24 +1,59 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+// import "./style.css";
 
-document.querySelector('#app').innerHTML = `
+document.querySelector("#app").innerHTML = `
+  <main>
+  <h1>Contact Us</h1>
+
+  <form>
+  <section class="full-name">
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
+  <label for="first-name">First Name <span>*</span></label><br>
+  <input type="text" id="first-name" name="first-name" required>
   </div>
-`
 
-setupCounter(document.querySelector('#counter'))
+  <div>
+  <label for="last-name">Last Name <span>*</span></label><br>
+  <input type="text" id="last-name" name="last-name" required>
+  </div>
+  </section>
+
+  <section class="email-address">
+  <label for="email-address">Email Address <span>*</span></label><br>
+  <input type="email" id="email-address" name="email-address" required>
+  </section>
+
+  <section class="query-type">
+  <p>Query Type <span>*</span></p>
+  <div>
+  <div class="general-enquiry">
+  <input type="radio" id="general-enquiry" name="query-type" required>
+  <label for="general-enquiry">General Enquiry</label>
+  </div>
+
+  <div class="support-request">
+  <input type="radio" id="support-request" name="query-type" required>
+  <label for="support-request">Support Request</label>
+  </div>
+  </div>
+  </section>
+
+  <section class="message">
+  <label for="message">Message <span>*</span></label><br>
+  <textarea id="message" name="message" required></textarea>
+  </section>
+
+  <section class="consent">
+  <input type="checkbox" id="consent" name="consent" value="yes" required>
+  <label for="consent">I consent to being contacted by the team <span>*</span></label>
+  </section>
+
+  <input type="submit" value="Submit">
+  </form>
+  </main>
+
+  <footer>
+  <p>
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a> | Coded by <a href="https://github.com/nadupoy" target="_blank">Nadupoy</a>
+  </p>
+  </footer>
+`;
