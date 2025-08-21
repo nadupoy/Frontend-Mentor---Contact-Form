@@ -67,27 +67,23 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+**1. The `name` attribute for `<input>`**
 
-To see how you can add code snippets, see below:
+Each input field must have a name attribute to be submitted. If omitted, the value of the input field will not be sent at all.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+<input type="text" id="first-name" name="first-name">
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+**2. `<input type="checkbox">` vs. `<input type="radio">`**
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
+
+```html
+<input type="radio" id="general-inquiry" name="query-type" required>
+...
+<input type="radio" id="support-request" name="query-type" required>
+```
 
 ### Continued development
 
