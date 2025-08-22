@@ -1,4 +1,4 @@
-// import "./style.css";
+import "./style.css";
 
 document.querySelector("#app").innerHTML = `
   <main>
@@ -7,18 +7,18 @@ document.querySelector("#app").innerHTML = `
   <form>
   <section class="full-name">
   <div>
-  <label for="first-name">First Name <span>*</span></label><br>
+  <label for="first-name">First Name <span>*</span></label>
   <input type="text" id="first-name" name="first-name" required>
   </div>
 
   <div>
-  <label for="last-name">Last Name <span>*</span></label><br>
+  <label for="last-name">Last Name <span>*</span></label>
   <input type="text" id="last-name" name="last-name" required>
   </div>
   </section>
 
   <section class="email-address">
-  <label for="email-address">Email Address <span>*</span></label><br>
+  <label for="email-address">Email Address <span>*</span></label>
   <input type="email" id="email-address" name="email-address" required>
   </section>
 
@@ -38,7 +38,7 @@ document.querySelector("#app").innerHTML = `
   </section>
 
   <section class="message">
-  <label for="message">Message <span>*</span></label><br>
+  <label for="message">Message <span>*</span></label>
   <textarea id="message" name="message" required></textarea>
   </section>
 
