@@ -6,12 +6,12 @@ document.querySelector("#app").innerHTML = `
 
   <form>
   <section class="full-name">
-  <div>
+  <div class="first-name">
   <label for="first-name">First Name <span>*</span></label>
   <input type="text" id="first-name" name="first-name" required>
   </div>
 
-  <div>
+  <div class="last-name">
   <label for="last-name">Last Name <span>*</span></label>
   <input type="text" id="last-name" name="last-name" required>
   </div>
