@@ -60,7 +60,7 @@ input[type="email"] {
   border-radius: 4px;
 }
 
-.query-type > p {
+.query {
   color: var(--grey-900);
   font-size: 0.9em;
 }
@@ -86,12 +86,19 @@ textarea {
 }
 
 .consent {
-  display: flex;
+  display: grid;
+  grid-template-columns: 6% 94%;
+  grid-template-rows: auto auto;
   font-size: 0.9rem;
 }
 
 input[name="consent"] {
-  margin-right: 12px;
+  justify-self: left;
+}
+
+.consent > .error-message {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 input[type="submit"] {
@@ -103,6 +110,14 @@ input[type="submit"] {
   color: var(--white);
   font-size: 1rem;
   font-weight: 700;
+}
+
+.error-message {
+  color: var(--red);
+  font-size: 0.9rem;
+  text-align: left;
+  margin-top: 4px;
+  display: none;
 }
 
 footer {
@@ -147,8 +162,8 @@ footer a:visited {
     margin-top: 24px;
   }
 
-  input[name="first-name"] {
-    margin-bottom: 16px;
+  .last-name {
+    margin-top: 16px;
   }
 
   .query-type > div {
@@ -168,6 +183,7 @@ footer a:visited {
 
   .consent {
     margin-bottom: 32px;
+    grid-template-columns: 10% 90%;
   }
 
   footer {
@@ -191,6 +207,10 @@ footer a:visited {
   main {
     padding: 24px;
     border-radius: 16px;
+  }
+
+  form {
+    margin-top: 24px;
   }
 
   .full-name {
