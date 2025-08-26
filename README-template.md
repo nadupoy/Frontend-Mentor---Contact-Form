@@ -1,6 +1,6 @@
 # Frontend Mentor - Contact form solution
 
-This is a solution to the [Contact form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Contact form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -15,8 +15,6 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -35,15 +33,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![screenshot-on-mobile-devices-375px](./screenshots/Mobile%20-%20375px.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+_Mobile Devices - 375px_
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+![screenshot-on-desktop-devices-1440-px](./screenshots/Desktop%20-%201440px.png)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+_Desktop Devices - 1440px_
 
 ### Links
 
@@ -72,7 +68,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 Each input field must have a name attribute to be submitted. If omitted, the value of the input field will not be sent at all.
 
 ```html
-<input type="text" id="first-name" name="first-name">
+<input type="text" id="first-name" name="first-name" />
 ```
 
 **2. `<input type="checkbox">` vs. `<input type="radio">`**
@@ -80,9 +76,9 @@ Each input field must have a name attribute to be submitted. If omitted, the val
 Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 ```html
-<input type="radio" id="general-inquiry" name="query-type" required>
+<input type="radio" id="general-enquiry" name="query-type" required />
 ...
-<input type="radio" id="support-request" name="query-type" required>
+<input type="radio" id="support-request" name="query-type" required />
 ```
 
 ### Continued development
