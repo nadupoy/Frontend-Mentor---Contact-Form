@@ -11,7 +11,7 @@ This is a solution to the [Contact form challenge on Frontend Mentor](https://ww
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
+  - [Challenges faced](#challenges-faced)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
@@ -81,7 +81,7 @@ Where multiple same-named controls exist, radio buttons allow one to be selected
 <input type="radio" id="support-request" name="query-type" required />
 ```
 
-### Continued development
+### Challenges faced
 
 Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
