@@ -37,7 +37,7 @@ function submitForm(event) {
     }
 
     // Check for errors on input[name="query-type"]:
-    if (inputField.name === "query-type" && inputField.value == false) {
+    if (inputField.name === "query-type" && inputField.checked == false) {
       let errorMessage = document.querySelector(".query-type > .error-message");
 
       errorMessage.style.display = "block";
