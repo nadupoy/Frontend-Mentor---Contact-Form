@@ -36,11 +36,17 @@ function submitForm(event) {
       errorMessage.style.display = "block";
     }
 
-    // Check for errors on input[name="query-type"]:
-    if (inputField.name === "query-type" && inputField.checked == false) {
-      let errorMessage = document.querySelector(".query-type > .error-message");
+    // Check for errors on input[type="radio"]:
+    if (inputField.type === "radio") {
+      let queryTypes = document.querySelectorAll("input[type='radio']");
 
-      errorMessage.style.display = "block";
+      if (queryTypes[0].checked == false && queryTypes[1].checked == false) {
+        let errorMessage = document.querySelector(
+          ".query-type > .error-message",
+        );
+
+        errorMessage.style.display = "block";
+      }
     }
 
     // Check for errors in <textarea>:
