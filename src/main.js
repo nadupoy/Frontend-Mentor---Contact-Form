@@ -51,7 +51,7 @@ function submitForm(event) {
     }
 
     // Check for errors in input[type="checkbox"]:
-    if (inputField.type === "checkbox" && inputField.value == false) {
+    if (inputField.type === "checkbox" && inputField.checked == false) {
       let errorMessage = document.querySelector(".consent > .error-message");
 
       errorMessage.style.display = "block";
