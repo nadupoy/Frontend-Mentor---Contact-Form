@@ -15,6 +15,9 @@ const successMessage = document.querySelector("dialog");
 let pattern = "[a-zA-Z0-9]+@[a-z]+.com";
 let regexp = new RegExp(pattern);
 
+// Radio buttons inputs collection:
+let queryTypes = document.querySelectorAll("input[type='radio']");
+
 contactForm.addEventListener("submit", submitForm);
 
 function submitForm(event) {
@@ -37,16 +40,14 @@ function submitForm(event) {
     }
 
     // Check for errors on input[type="radio"]:
-    if (inputField.type === "radio") {
-      let queryTypes = document.querySelectorAll("input[type='radio']");
-
-      if (queryTypes[0].checked == false && queryTypes[1].checked == false) {
-        let errorMessage = document.querySelector(
-          ".query-type > .error-message",
-        );
-        errorMessage.style.display = "block";
-        event.preventDefault();
-      }
+    if (
+      inputField.type === "radio" &&
+      queryTypes[0].checked == false &&
+      queryTypes[1].checked == false
+    ) {
+      let errorMessage = document.querySelector(".query-type > .error-message");
+      errorMessage.style.display = "block";
+      event.preventDefault();
     }
 
     // Check for errors in <textarea>:
@@ -62,5 +63,23 @@ function submitForm(event) {
       errorMessage.style.display = "block";
       event.preventDefault();
     }
+
+    // All input fields are filled correctly:
+    if (
+      (inputField.type === "text" &&
+      inputField.value == true) &&
+      (inputField.type === "email" &&
+      (inputField.value == true &&
+      regexp.test(inputField.value) === true)) &&
+      (inputField.type === "radio" &&
+      (queryTypes[0].checked == true || queryTypes[1].checked == true)) &&
+      (inputField.name === "message" &&
+      inputField.value == true) &&
+      (inputField.type === "checkbox" &&
+      inputField.checked == true)
+    ) {
+      contactForm.submit();
+			successMessage.showModal();
+    }	
   }
 }
