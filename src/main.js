@@ -22,8 +22,8 @@ function submitForm(event) {
     // Check for errors on input[name="first-name"] and input[name="last-name"]:
     if (inputField.type === "text" && inputField.value == false) {
       let errorMessage = inputField.nextElementSibling;
-
       errorMessage.style.display = "block";
+      event.preventDefault();
     }
 
     // Check for errors on input[type="email"]:
@@ -32,8 +32,8 @@ function submitForm(event) {
       (inputField.value == false || regexp.test(inputField.value) === false)
     ) {
       let errorMessage = inputField.nextElementSibling;
-
       errorMessage.style.display = "block";
+      event.preventDefault();
     }
 
     // Check for errors on input[type="radio"]:
@@ -44,25 +44,23 @@ function submitForm(event) {
         let errorMessage = document.querySelector(
           ".query-type > .error-message",
         );
-
         errorMessage.style.display = "block";
+        event.preventDefault();
       }
     }
 
     // Check for errors in <textarea>:
     if (inputField.name === "message" && inputField.value == false) {
       let errorMessage = inputField.nextElementSibling;
-
       errorMessage.style.display = "block";
+      event.preventDefault();
     }
 
     // Check for errors in input[type="checkbox"]:
     if (inputField.type === "checkbox" && inputField.checked == false) {
       let errorMessage = document.querySelector(".consent > .error-message");
-
       errorMessage.style.display = "block";
+      event.preventDefault();
     }
-
-    event.preventDefault();
   }
 }
