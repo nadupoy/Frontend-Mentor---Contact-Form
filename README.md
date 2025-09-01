@@ -42,8 +42,8 @@ _Desktop Devices - 1440px_
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/contact-form-using-html-css-and-vanilla-javascript-IUMaFTa7C6)
+- [Live Site URL](https://profound-mochi-144a38.netlify.app)
 
 ## My process
 
